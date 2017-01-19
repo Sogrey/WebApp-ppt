@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Web app 初试</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="img/icon.ico" />
+		<link rel="stylesheet" href="shower/styles/screen-16x10.css">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body class="shower list">
+		<header class="caption">
+			<h1>Web app 初试</h1>
+			<p></p>
+		</header>
+		<section class="slide" id="cover">
+			<h2>Web app 初试</h2>
+			<p>2017-01-19</p>
+			<img src="img/pic_cover.png" />
+			<style>
+				#cover {
+					background: #76ac61;
+					text-align: center;
+				}
+				
+				#cover h2 {
+					margin: 30px 0 0;
+					color: #FFF;
+					text-align: center;
+					font-size: 70px;
+				}
+				
+				#cover p {
+					margin: 10px 0 0;
+					text-align: center;
+					color: #FFF;
+					font-style: italic;
+					font-size: 20px;
+				}
+				
+				#cover img {
+					width: 618px;
+					height: 327px;
+					margin: 20px auto;
+				}
+			</style>
+		</section>
+		<section class="slide">
+			<h2>什么是Webapp</h2>
+			<p class="quote">网络应用程序（简称 Webapp）是一种使用网页浏览器在互联网或企业内部网上操作的应用软件。是一种以网页语言（例如HTML、JavaScript、Java等编程语言）撰写的应用程序，需要通过浏览器来运行。<br/>
+				<span class="comefrom">——《维基百科》</span>
+			</p>
+			<p class="note">Webapp说白了就是一个针对Iphone、Android优化后的web站点，它使用的技术无非就是HTML或HTML5、CSS3、JavaScript，服务端技术JAVA、PHP、ASP。</p>
+		</section>
+		<section class="slide">
+			<h2>移动Web时代</h2>
+			<table>
+				<thead>
+					<tr>
+						<td>平台</td>
+						<td>语言</td>
+						<td>代表</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Android</td>
+						<td>Html(3)</td>
+						<td>Android(google) Browser</td>
+					</tr>
+					<tr>
+						<td>iOS</td>
+						<td>css(3)</td>
+						<td>iOS safari</td>
+					</tr>
+					<tr>
+						<td>BlackBerry</td>
+						<td>Javascrpit</td>
+						<td>BlackBerry Webkit</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section class="slide">
+			<h2>WebApp与Native App有何区别呢？</h2>
+			<p>Native App：</p>
+			<ul type="circle">
+				<li><span class="emp">开发成本非常大。</span><span class="quote_inline">一般使用的开发语言为JAVA、C++、Objective-C。</span></li>
+				<li><span class="emp">更新体验较差、同时也比较麻烦。</span><span class="quote_inline">每一次发布新的版本，都需要做版本打包，且需要用户手动更新（有些应用程序即使不需要用户手动更新，但是也需要有一个恶心的提示）</span></li>
+				<li><span class="emp">非常酷。</span><span class="quote_inline">因为native app可以调用IOS中的UI控件以UI方法，它可以实现WebApp无法实现的一些非常酷的交互效果</span></li>
+				<li><span class="emp">Native app是被Apple认可的。</span><span class="quote_inline">Native app可以被Apple认可为一款可信任的独立软件，可以放在Apple Stroe出售，但是Web app却不行</span></li>
+			</ul>
+			<p>Web App：</p>
+			<ul type="circle">
+				<li><span class="emp">开发成本较低。</span><span class="quote_inline">使用web开发技术就可以轻松的完成web app的开发</span></li>
+				<li><span class="emp">升级较简单。</span><span class="quote_inline">升级不需要通知用户，在服务端更新文件即可，用户完全没有感觉</span></li>
+				<li><span class="emp">维护比较轻松。</span><span class="quote_inline">和一般的web一样，维护比较简单，它其实就是一个站点</span></li>
+				<li><span class="emp">Native app是被Apple认可的。</span><span class="quote_inline">Native app可以被Apple认可为一款可信任的独立软件，可以放在Apple Stroe出售，但是Web app却不行</span></li>
+			</ul>
+			<style>
+				ul {}
+				
+				ul li {
+					font-size: 18px;
+					line-height: 24px;
+				}
+			</style>
+		</section>
+		<section class="slide">
+			<h2>webkit内核的一些私有的meta标签</h2>
+			<p>因为这些高端智能手机（Iphone、Android）的内置浏览器都是基于webkit内核的，所以在开发WEBAPP时，多数都是使 用 HTML5和CSS3技术做UI布局。</p>
+
+			<pre class="textSmall">
+				<code >&lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, <br/>user-scalable=0;" name="viewport" /&gt;</code>
+				<code >&lt;meta content="yes" name="apple-mobile-web-app-capable" /&gt;</code>
+				<code >&lt;meta content="black" name="apple-mobile-web-app-status-bar-style" /&gt;</code>
+				<code >&lt;meta content="telephone=no" name="format-detection" /&gt;</code>
+			</pre>
+			<style>
+				.slide pre.textSmall code {
+					line-height: 24px;
+				}
+			</style>
+			<ul>
+				<li>第一个meta标签表示：强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览；</li>
+				<li>第二个meta标签是iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览；</li>
+				<li>第三个meta标签也是iphone的私有标签，它指定的iphone中safari顶端的状态条的样式；</li>
+				<li>第四个meta标签表示：告诉设备忽略将页面中的数字识别为电话号码。</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<h2>响应式布局</h2>
+			<p>先认识下media query属性</p>
+			<pre class="textSmall">
+				<code >@media screen and (min-width: 320px) and (max-width : 479px)</code>
+			</pre>
+			<p class="small_lineheight">就从这个条件语句开始介绍，media属性后面跟着的是一个 screen 的媒体类型(
+				<a href="http://www.w3chtml.com/css3/appendix/media-types.html">十种媒体类型</a>之一)。然后用 and 关键字来连接条件（其他关键字还有 not， only，看字面大家能理解，就不多说。然后括号里就是一个媒体查询语句，稍微懂点css的同学都能看懂，这个条件语句意思是在大于320小于479 的分辨率下所激活的样式表。</p>
+			<br />
+			<p class="small_lineheight">有一种情况除外，就是高像素比的终端，比如 iphone4以上的retina屏，一个iphone5的小小的屏幕，他的分辨率竟然达到了1136*640，几乎等于 一个笔记本的分辨率</p>
+			<pre class="textSmall">
+				<code >@media only screen and (min-device-pixel-ratio: 2)</code>
+			</pre>
+			<p class="small_lineheight">就是判断终端的像素比是2的话，所渲染的样式。iphone4以上像素比是2，高分辨率Andriod设备像素比是1.5</p>
+			<style>
+				.small_lineheight {
+					line-height: 24px;
+					font-size: 20px;
+				}
+			</style>
+		</section>
+		<section class="slide">
+			<h2>html5/css3响应式页面的设计流程</h2>
+			<div class="scroll_view">
+				<p class="step">第一步：确定需要兼容的设备类型、屏幕尺寸</p>
+				<p class="note">
+					通过用户研究，了解用户使用的设备分布情况，确定需要兼容的设备类型、屏幕尺寸。<br/> 设备类型：包括移动设备（手机、平板）和pc。对于移动设备，设计和实现的时候注意增加手势的功能。
+					<br/> 屏幕尺寸：包括各种手机屏幕的尺寸（包括横向和竖向）、各种平板的尺寸（包括横向和竖向）、普通电脑屏幕和宽屏。
+				</p>
+				<p class="step">第二步：制作线框原型</p>
+				<p class="note">
+					针对确定下来的几个尺寸分别制作不同的线框原型，需要考虑清楚不同尺寸下，页面的布局如何变化，内容尺寸如何缩放，功能、内容的删减，甚至针对特殊的环境作特殊化的设计等。这个过程需要设计师和前端开发人员保持密切的沟通。
+					<img src="img/0Z9594600-0.png" />
+				</p>
+				<p class="step">第三步：测试线框原型</p>
+				<p class="note">
+					将图片导入到相应的设备进行一些简单的测试，可帮助我们尽早发现可访问性、可读性等方面存在的问题。
+				</p>
+
+				<p class="step">第四步：视觉设计</p>
+				<p class="note">
+					注意，移动设备的屏幕像素密度与传统电脑屏幕不一样，在设计的时候需要保证内容文字的可读性、控件可点击区域的面积等。
+				</p>
+				<p class="step">第五步：前端实现</p>
+				<p class="note">
+					与传统的web开发相比，响应式设计的页面由于页面布局、内容尺寸发生了变化，所以最终的产出更有可能与设计稿出入较大，需要前端开发人员和设计师多沟通。
+				</p>
+			</div>
+			<style>
+				.step {}
+				
+				.note {
+					font-size: 16px;
+					line-height: 24px;
+				}
+				
+				.note img {
+					width: 500px;
+					height: 450px;
+					display: block;
+					margin: 10px auto;
+				}
+			</style>
+		</section>
+		<section class="slide">
+			<h2>几个web app</h2>
+			<img src="img/baidu_webapp.png" width="250" height="400" />
+			<img src="img/taobao_webapp.png" width="250" height="400" />
+			<img src="img/qunaer_webapp.png" width="250" height="400" />
+		</section>
+		<section class="slide">
+			<h2>主流移动js框架</h2>
+			<a href="http://dl.iteye.com/upload/picture/pic/116279/e7e73e03-c40a-3ac2-b72b-a1c3704441b1.png" target="_blank">
+				<img src="http://dl.iteye.com/upload/picture/pic/116279/e7e73e03-c40a-3ac2-b72b-a1c3704441b1.png" width="100%" height="80%" />
+			</a>
+		</section>
+		<section class="slide">
+			<h2>移动Web现状与展望</h2>
+			<div class="scroll_view">
+				<p>现状：</p>
+				<p class="note">
+					目前iOS和Android系统的浏览器都是webkit核心的，我们可以开发移动Web应用来满足这块需求。iOS支持硬件加速，Android系统也能满足基本Webkit的API功能，适宜通过区分iOS来提供差异化服务。iOS的Mobile Safari有足够能力提供webkitTransForm（图形变换，3D变换支持硬件加速）、webkitTransition（CSS3动画）、SQLite、LocalStorage（离线存储）、 WebSocket（iOS 4.2+）服务。至于Android，因为需要兼容参差的低端设备，还是不建议使用复杂图形变换和CSS3动画，其它能力可以通过判断能否支持来选择使用。另外多点触摸、重力感应、地理位置还是根据能否支持和需要来使用，主要用于优化用户体验，不影响基本交互方式。
+				</p>
+				<p>未来：</p>
+				<p class="note">
+					伴随着html5兴起是flash的没落，html5除了移动设备的跨平台性和较好的做媒体支持外，它的应用范围也广于flash，html5在近几年也会在以下四大方面有所突破。</p>
+				<ul type="circle">
+					<li><span>往重度内容化方向发展</span>:在用户对页面交互能力和HTML5拓展功能的要求提高之际，轻度营销的市场份额会逐渐降低，往重度营销内容转化。</li>
+					<li><span>往网页游戏方向发展</span>:网页游戏在未来更可能结合html5优良的通信功能，往跨屏互动等交互特征更明显的形式发展。</li>
+					<li><span>往在线应用方向发展</span>:密切相关的垂直行业包括在线教育、电商和流媒体三种类型。</li>
+					<li><span>往内容直接填充方向发展</span>:在html5模板的帮助下，新媒体内容能够通过应用母版进行编辑，用户只需要后期进行图文内容的替换，因此这也很可能是成为传媒业转型的契机。</li>
+				</ul>
+
+				<p>微信小程序强势袭来...</p>
+			</div>
+			<style>
+				ul li span{
+					color: #76AC61;
+					font-size: 18px;
+				}
+			</style>
+		</section>
+		<section class="slide" id="picture">
+			<h2>THE END</h2>
+			<p id="end_tip">Thanks for listening!</p>
+			<style>
+				#picture {
+					background: #76ac61;
+					text-align: center;
+				}
+				
+				#picture h2 {
+					color: #FFF;
+				}
+				
+				#picture p {
+					color: #FFF;
+					font-size: larger;
+				}
+			</style>
+		</section>
+		<!--
+        	作者：408270653@qq.com
+        	时间：2016-04-01
+        	描述：角标
+        -->
+		<p class="badge">
+			<a href="https://github.com/Sogrey" target="_blank">by Sogrey</a>
+		</p>
+		<!--
+        	作者：408270653@qq.com
+        	时间：2016-04-01
+        	描述：进度
+        -->
+		<div class="progress"></div>
+		<script src="shower/shower.min.js"></script>
+
+	</body>
+
+</html>
