@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>WebApp demo</title>
+		<link rel="stylesheet" href="css/style.css" />
+		
+	</head>
+
+	<body>
+		<p id="test"></p>
+		<div class="div1" id="div1">内容1</div>
+		<div class="div1">
+			<div class="div2" id="div2">内容2</div>
+			<div class="div2" id="div3">内容3</div>
+			<div class="div2" id="div4">内容4</div>
+			<div class="div2" id="div5">内容5</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script>
+		window.onload = function() {
+				changeDivHeight();
+			}
+			//当浏览器窗口大小改变时，设置显示内容的高度  
+		window.onresize = function() {
+			changeDivHeight();
+		}
+
+		function changeDivHeight() {
+			var height = 
+			$(document).innerHeight();
+			//document.documentElement.clientHeight; //获取页面可见高度
+			var width  = 
+			$(document).innerWidth();
+			//document.documentElement.clientWidth;
+			$("p#test").html(width+":"+height);
+		}
+	</script>
+
+</html>
