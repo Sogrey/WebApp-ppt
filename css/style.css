@@ -2,7 +2,7 @@
 
 .quote{padding: 10px;background: #efefef;}
 .quote .comefrom{display: block;text-align: right;}
-.quote_inline{background: #efefef;}
+.quote_inline{/*background: #efefef;*/color:#666;}
 
 .emp{font-weight: 600;}
 pre.textSmall code{background: #efefef;padding:3px 100px ;}
