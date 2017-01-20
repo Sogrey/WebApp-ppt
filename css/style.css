@@ -6,7 +6,4 @@
 
 .emp{font-weight: 600;}
 pre.textSmall code{background: #efefef;padding:3px 100px ;}
-.scroll_view {
-					height: 80%;
-					overflow-y: auto;
-				}
+.scroll_view {height: 80%;overflow-y: auto;}
