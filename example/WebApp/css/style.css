@@ -1,12 +1,7 @@
 @charset "utf-8";
 * {
-	border: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	word-spacing: 0;
+	box-sizing: border-box;
 }
-
 body {
 	background: #fff;
 }
@@ -22,6 +17,7 @@ div {
 	color: #FFFFFF;
 	font-size: 30px;
 	line-height: 200px;
+	border: 1px solid red;
 }
 
 .div2 {
@@ -84,4 +80,9 @@ div {
 	.div2 {
 		width: 25%;
 	}
+}
+
+@media print
+{
+	div {font-family:times,serif;font-size:10px;border:1px #000 solid;}
 }
